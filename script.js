@@ -31,7 +31,7 @@ function checkForMatch() {
             audioSuccess.play();
         }, 750);
         const flipped = document.querySelectorAll('.flip');
-        if (flipped.length === 12) gameComplete();
+        if (flipped.length === 18) gameComplete();
         return;
     }
 
@@ -69,7 +69,7 @@ function resetBoard() {
 //função que embaralha as cartas
 (function shuffle() {
     cards.forEach((card) => {
-        let randomPosition = Math.floor(Math.random() * 12);
+        let randomPosition = Math.floor(Math.random() * 18);
         card.style.order = randomPosition;
     })
 })();

@@ -45,16 +45,16 @@ nav li {
 
 .memory-game {
     height: 75vh;
-    width: 75vh;
+    width: 100vh;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     perspective: 1000px; /* perspectiva do usuario no eixo z, quanto maior, maior o efeito da perspectiva */
 }
 
 .card {
-    height: calc( 33.333% - 10px);
-    width: calc(25% - 10px);
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
     margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
