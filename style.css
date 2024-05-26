@@ -44,20 +44,19 @@ nav li {
 }
 
 .memory-game {
-    height: 75vh;
-    width: 100vh;
-    margin: auto;
+    padding: min(10px,1vh) min(30px, 2vw);
+    height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    gap: 10px 10px;
     perspective: 1000px; /* perspectiva do usuario no eixo z, quanto maior, maior o efeito da perspectiva */
 }
 
 .card {
-    height: calc(100% - 10px);
-    width: calc(100% - 10px);
-    margin: 5px;
     position: relative;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    border-radius: 5px;
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d; /* adiciona perspectiva 3d, para que o elemento nao fique achatada no plano */
@@ -76,8 +75,8 @@ nav li {
   height: 100%;
   padding: 20px;
   position: absolute;
+  object-fit: scale-down;
   border-radius: 5px;
-
   backface-visibility: hidden; /* todo elemento tem uma frente e um verso (ao contrario, como um espelho.) essa propriedade retira o verso */
 }
 
@@ -100,7 +99,6 @@ nav li {
 
 @media only screen and (orientation: portrait) {
     .memory-game {
-        height: 75vw;
-        width: 75vw;
+
     }
 }
